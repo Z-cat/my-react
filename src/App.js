@@ -1,4 +1,5 @@
 import './APP.css'
+import 'antd/dist/antd.min.css';
 import { BrowserRouter,Routes, Route } from "react-router-dom"
 import Home from './components/home'
 import Login from './pages/Login/index.js'
