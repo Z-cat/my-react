@@ -3,11 +3,23 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import React from 'react';
 import { useNavigate } from 'react-router-dom'
+import request from '@/utils/request'
 function Login() {
     const navigate = useNavigate();
     const onFinish = (values) => {
-        // console.log('Received values of form: ', values);
-        navigate('/layout')
+        console.log(values);
+        // request({
+        //   method: "GET",
+        //   url: `/login?}`,
+        //   params: values,
+        // })
+        //   .then((res) => {
+        //     console.log(res, "res");
+        //     // navigate('/layout')
+        //   })
+        //   .catch((err) => {
+        //     alert(err);
+        //   });
       };
     return (
         <div className="login">
@@ -24,7 +36,7 @@ function Login() {
                 >
                 <Form.Item
                     name="username"
-                    rules={[{ required: true, message: 'Please input your Username!' }]}
+                    rules={[{ required: true, message: 'Please input your Username!'}]}
                 >
                     <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
                 </Form.Item>
