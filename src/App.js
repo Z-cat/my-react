@@ -1,8 +1,8 @@
-
-import './App.css';
+import './APP.css'
+import 'antd/dist/antd.min.css';
 import { BrowserRouter,Routes, Route } from "react-router-dom"
 import Home from './components/home'
-import Login from './components/login'
+import Login from './pages/Login/index.js'
 import Not from "./components/404";
 import Layout from "./layout/Layout";
 function App() {
