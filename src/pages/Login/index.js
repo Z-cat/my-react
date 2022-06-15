@@ -8,18 +8,19 @@ function Login() {
     const navigate = useNavigate();
     const onFinish = (values) => {
         console.log(values);
-        // request({
-        //   method: "GET",
-        //   url: `/login?}`,
-        //   params: values,
-        // })
-        //   .then((res) => {
-        //     console.log(res, "res");
-        //     // navigate('/layout')
-        //   })
-        //   .catch((err) => {
-        //     alert(err);
-        //   });
+        request({
+          method: "GET",
+          url: `/login`,
+          params: values,
+        })
+          .then((res) => {
+            // console.log(res, "res");
+            alert(res)
+            navigate('/layout')
+          })
+          .catch((err) => {
+            alert(err);
+          });
       };
     return (
         <div className="login">
